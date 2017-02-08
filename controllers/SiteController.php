@@ -155,29 +155,6 @@ class SiteController extends Controller
 
     public function actionThree()
     {
-//        $select = (new Query())
-//            ->select([
-//                '{{%staff}}.name',
-//                '{{%cities}}.name as city',
-//                '{{%emails}}.name as email',
-//                'COUNT({{%staff_phones}}.staff__id) as phone_count',
-//            ])
-//            ->from('{{%staff}}')
-//            ->leftJoin('{{%staff_cities}}' ,'{{%staff}}.id = {{%staff_cities}}.staff__id')
-//            ->innerJoin('{{%cities}}' ,'{{%cities}}.id = {{%staff_cities}}.cities__id')
-//
-//            ->innerJoin('{{%staff_phones}}' ,'{{%staff}}.id = {{%staff_phones}}.staff__id')
-//
-//            ->leftJoin('{{%staff_emails}}' ,'{{%staff}}.id = {{%staff_emails}}.staff__id')
-//            ->innerJoin('{{%emails}}' ,'{{%emails}}.id = {{%staff_emails}}.emails__id')
-//
-//            ->andHaving(['>', 'phone_count', 1])
-//            ->andWhere(['LIKE', '{{%emails}}.name', '%.com', false])
-//
-//            ->groupBy(['{{%staff}}.id'])
-//            ->orderBy(['{{%staff}}.name' => SORT_ASC]);
-
-
         $model = new StaffSearch();
         $dataProvider = $model->three();
 

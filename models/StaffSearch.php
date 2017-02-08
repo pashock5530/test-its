@@ -36,7 +36,7 @@ class StaffSearch extends Staff {
         $dataProvider = new ActiveDataProvider([
             'query' => $select,
         ]);
-        
+
         return $dataProvider;
     }
 
